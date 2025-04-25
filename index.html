@@ -12,6 +12,21 @@
   />
 
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      height: 100vh;
+      padding: 100px 20px;
+    }
+
+    .nav-links a.active {
+      color: #71B34A;
+      border-bottom: 2px solid #71B34A;
+    }
+  </style>
 </head>
 <body>
 
@@ -27,18 +42,18 @@
 
     <div class="nav-center">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li class="dropdown">
-          <a href="#">Pages ▾</a>
+          <a href="#pages">Pages ▾</a>
           <ul class="dropdown-content">
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Testimonials</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
           </ul>
         </li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <button class="hire-btn">Hire Me</button>
@@ -52,6 +67,58 @@
       <i class="fa-solid fa-moon" id="themeToggle"></i>
     </div>
   </nav>
+
+  <!-- Page Sections -->
+  <section id="hero">Home Section</section>
+  <section id="about">About Section</section>
+  <section id="services">Services Section</section>
+  <section id="pages">Pages Section</section>
+  <section id="portfolio">Portfolio Section</section>
+  <section id="team">Team Section</section>
+  <section id="testimonials">Testimonials Section</section>
+  <section id="contact">Contact Section</section>
+
+  <script>
+    // Highlight active nav link on scroll
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY + 100;
+
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+        if (
+          section &&
+          section.offsetTop <= scrollPos &&
+          section.offsetTop + section.offsetHeight > scrollPos
+        ) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  <!-- Home / Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-left">
+      <h1>Hi, I'm <span class="name">John Watson</span></h1>
+      <h2 class="typing-text" id="typing"></h2>
+      <p>
+        I love Graphic design and Photography and have been working on my portfolio since 2016.
+        I can give your business a new <span class="highlight">Creative</span> start right away!
+      </p>
+      <div class="hero-buttons">
+        <button class="btn hire">Hire Me</button>
+        <button class="btn portfolio">Portfolio</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="profile.jpg" alt="Profile" />
+    </div>
+  </div>
+</section>
+
 
   <script src="script.js"></script>
 </body>
