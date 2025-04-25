@@ -1,0 +1,140 @@
+/* About section styles */
+.w3l-about {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.HomePageAbout {
+    position: relative;
+}
+
+.w3l-title-small {
+    color: #dc3545;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.w3l-title-main {
+    color: #212529;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.my-image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.my-image img:hover {
+    transform: translateY(-5px);
+}
+
+.single-info {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.single-info span {
+    font-weight: 600;
+    color: #212529;
+    min-width: 100px;
+}
+
+.single-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.single-info a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.single-info a:hover {
+    color: #dc3545;
+}
+
+.follow-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.follow-social li a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 50%;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+.follow-social li a:hover {
+    background: #dc3545;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.btn-style {
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+}
+
+.btn-secondary:hover {
+    background: #dc3545;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .w3l-title-main {
+        font-size: 2rem;
+    }
+    
+    .my-image {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .w3l-about {
+        padding: 60px 0;
+    }
+    
+    .follow-social {
+        flex-wrap: wrap;
+    }
+}
