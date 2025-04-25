@@ -1,0 +1,343 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4%;
+  background: rgba(26, 26, 26, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  backdrop-filter: blur(4px);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #71B34A;
+}
+
+/* Center Group (Menu + Hire + Icons) */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  list-style: none;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+}
+
+/* Dropdown links inside */
+.dropdown-content li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on dropdown items */
+.dropdown-content li a:hover {
+  background-color: #444;
+}
+
+/* Hover effect on Pages link */
+.dropdown > a {
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.dropdown:hover > a {
+  background-color: #222;
+}
+
+
+
+.dropdown-content li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hire Me Button */
+.hire-btn {
+  background: #71B34A;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Icons (close to Hire Me) */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.nav-icons i {
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Search Box */
+.search-box {
+  display: none;
+  align-items: center;
+  background-color: #222;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-box.active {
+  display: flex;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Light Theme */
+.light {
+  background-color: white;
+  color: black;
+}
+
+.light .navbar {
+  background: #f5f5f5;
+}
+
+.light .nav-links li a,
+.light .logo,
+.light #searchIcon,
+.light #themeToggle,
+.light .search-box input {
+  color: black;
+}
+
+.light .dropdown-content {
+  background-color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .search-box input {
+    font-size: 0.9rem;
+  }
+}
+
+/* hero section */
+.hero {
+  padding: 4rem 2rem;
+  background-color: #111;
+  color: white;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  color: #71B34A;
+}
+
+.typing-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F7931E;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: #F7931E;
+  font-weight: bold;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.hire {
+  background-color: #71B34A;
+  color: white;
+}
+
+.btn.portfolio {
+  background-color: transparent;
+  border: 2px solid #F7931E;
+  color: #F7931E;
+}
+
+.btn.hire:hover {
+  background-color: #5da93e;
+}
+
+.btn.portfolio:hover {
+  background-color: #F7931E;
+  color: white;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
