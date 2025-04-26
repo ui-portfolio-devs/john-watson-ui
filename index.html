@@ -12,96 +12,6 @@
   />
 
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="logo">UI <span>Portfolio</span></div>
-
-    <div class="hamburger" id="hamburger">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-
-    <div class="nav-center">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li class="dropdown">
-          <a href="#">Pages ▾</a>
-          <ul class="dropdown-content">
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Testimonials</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <button class="hire-btn">Hire Me</button>
-    </div>
-
-    <div class="nav-icons">
-      <div class="search-box" id="searchBox">
-        <input type="text" placeholder="Search..." />
-      </div>
-      <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
-      <i class="fa-solid fa-moon" id="themeToggle"></i>
-    </div>
-  </nav>
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-left">
-      <h1>Hi, I'm <span class="name">John Watson</span></h1>
-      <h2 class="typing-text" id="typing"></h2>
-      <p>
-        I love Graphic design and Photography and have been working on my portfolio since 2016.
-        I can give your business a new <span class="highlight">Creative</span> start right away!
-      </p>
-      <div class="hero-buttons">
-        <button class="btn hire">Hire Me</button>
-        <button class="btn portfolio">Portfolio</button>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="profile.jpg" alt="Profile" />
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-  <script src="script.js"></script>
-
-
-
-
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UI Portfolio</title>
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
-  <link rel="stylesheet" href="style.css" />
   <style>
     html {
       scroll-behavior: smooth;
@@ -132,7 +42,7 @@
 
     <div class="nav-center">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li class="dropdown">
@@ -158,8 +68,28 @@
     </div>
   </nav>
 
-  <!-- Page Sections -->
-  <section id="hero">Home Section</section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="name">John Watson</span></h1>
+        <h2 class="typing-text" id="typing"></h2>
+        <p>
+          I love Graphic design and Photography and have been working on my portfolio since 2016.
+          I can give your business a new <span class="highlight">Creative</span> start right away!
+        </p>
+        <div class="hero-buttons">
+          <button class="btn hire">Hire Me</button>
+          <button class="btn portfolio">Portfolio</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="profile.jpg" alt="Profile" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Sections -->
   <section id="about">About Section</section>
   <section id="services">Services Section</section>
   <section id="pages">Pages Section</section>
@@ -167,6 +97,9 @@
   <section id="team">Team Section</section>
   <section id="testimonials">Testimonials Section</section>
   <section id="contact">Contact Section</section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
   <script>
     // Highlight active nav link on scroll
@@ -188,28 +121,6 @@
       });
     });
   </script>
-  <!-- Home / Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-container">
-    <div class="hero-left">
-      <h1>Hi, I'm <span class="name">John Watson</span></h1>
-      <h2 class="typing-text" id="typing"></h2>
-      <p>
-        I love Graphic design and Photography and have been working on my portfolio since 2016.
-        I can give your business a new <span class="highlight">Creative</span> start right away!
-      </p>
-      <div class="hero-buttons">
-        <button class="btn hire">Hire Me</button>
-        <button class="btn portfolio">Portfolio</button>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img src="profile.jpg" alt="Profile" />
-    </div>
-  </div>
-</section>
 
-
-  <script src="script.js"></script>
 </body>
 </html>
