@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - UI Portfolio</title>
+  <title>Portfolio - UI Portfolio</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -25,12 +25,12 @@
         <li class="dropdown">
           <a href="#">Pages ▾</a>
           <ul class="dropdown-content">
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
           </ul>
         </li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="hire-btn">Hire Me</button>
     </div>
@@ -41,55 +41,66 @@
     </div>
   </nav>
 
-  <!-- Contact Header -->
-  <section class="page-header contact-header">
-    <h1>Contact Us</h1>
-    <p><a href="index.html">Home</a> » Contact</p>
+  <!-- Portfolio Header -->
+  <section class="page-header portfolio-header">
+    <h1>My Creative Portfolio</h1>
+    <p><a href="index.html">Home</a> » Portfolio</p>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-section dark-section">
-    <div class="contact-container">
-      <div class="contact-left">
-        <h2>Want to get in touch?</h2>
-        <p>Feel free to reach out by filling the form below.</p>
+  <!-- Portfolio Gallery -->
+  <section class="portfolio-section dark-section">
+    <div class="portfolio-container">
 
-        <form action="#" method="POST" class="contact-form">
-          <div class="form-row">
-            <div class="form-group half-width">
-              <input type="text" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group half-width">
-              <input type="email" name="email" placeholder="Your Email" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <input type="text" name="phone" placeholder="Your Phone Number" required>
-          </div>
-
-          <div class="form-group">
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          </div>
-
-          <button type="submit" class="btn hire">Submit Message</button>
-        </form>
+      <div class="portfolio-card">
+        <img src="images/portfolio1.jpg" alt="Project 1">
+        <div class="overlay">
+          <h3>Brand Identity Design</h3>
+          <p>Logo, Typography, Color Palette</p>
+        </div>
       </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio2.jpg" alt="Project 2">
+        <div class="overlay">
+          <h3>Mobile App UI</h3>
+          <p>iOS and Android App Design</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio3.jpg" alt="Project 3">
+        <div class="overlay">
+          <h3>Landing Page</h3>
+          <p>Creative and Responsive Webpage</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio4.jpg" alt="Project 4">
+        <div class="overlay">
+          <h3>E-commerce Website</h3>
+          <p>Shopify / WooCommerce Build</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio5.jpg" alt="Project 5">
+        <div class="overlay">
+          <h3>Photography Showcase</h3>
+          <p>Portrait and Product Photography</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio6.jpg" alt="Project 6">
+        <div class="overlay">
+          <h3>Marketing Campaign</h3>
+          <p>Digital Ads & Strategy</p>
+        </div>
+      </div>
+
     </div>
   </section>
-  <!-- Map Section -->
-<section class="map-section full-width-map">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15883.878327717188!2d-0.22737521842946902!3d5.5741216329870075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf853e5acb9dcb%3A0x1b5b776e45b0d71c!2sAccra%20New%20Town%2C%20Accra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1714211348391!5m2!1sen!2sgh" 
-    width="100%" 
-    height="500" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
-
 
   <!-- Footer -->
   <footer class="footer">
